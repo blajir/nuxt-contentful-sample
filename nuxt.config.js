@@ -41,7 +41,8 @@ module.exports = {
   */
   modules: [
     // Doc: https://github.com/nuxt-community/axios-module#usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/vuetify'
   ],
   /*
   ** Axios module configuration
@@ -66,5 +67,14 @@ module.exports = {
     CTF_CDA_ACCESS_TOKEN: config.CTF_CDA_ACCESS_TOKEN,
     CTF_PERSON_ID: config.CTF_PERSON_ID,
     CTF_BLOG_POST_TYPE_ID: config.CTF_BLOG_POST_TYPE_ID
+  },
+  vuetify: {
+    // Vuetify の設定はここに書く
+    theme: {
+      primary: '#3f51b5',
+      secondary: '#b0bec5',
+      accent: '#8c9eff',
+      error: '#b71c1c'
+    }
   }
 }

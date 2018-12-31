@@ -1,5 +1,11 @@
 <template>
-  <Item :posts="posts"></Item>
+  <v-app>
+    <v-content>
+      <v-container>
+        <Item :posts="posts"></Item>
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>

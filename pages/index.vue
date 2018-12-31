@@ -1,8 +1,7 @@
 <template>
   <div>
-    <!-- render data of the person -->
     <h1>{{ person.fields.name }}</h1>
-    <!-- render blog posts -->
+    <nuxt-link :to="{name: 'posts'}"><p>posts</p></nuxt-link>
   </div>
 </template>
 
