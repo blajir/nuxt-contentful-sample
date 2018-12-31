@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <!-- render data of the person -->
-    <h1>{{ person.fields.name }}</h1>
-    <!-- render blog posts -->
-  </div>
+  <Item :posts="posts"></Item>
 </template>
 
 <script>
