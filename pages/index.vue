@@ -1,20 +1,23 @@
 <template>
   <div>
-    <h1>{{ person.fields.name }}</h1>
+    <h1></h1>
+    <img class="profile__image" :src="person.fields.image.fields.file.url" alt="">
+    <p>{{ person.fields.name }}</p>
+    <p>{{ person.fields.title }}</p>
     <nuxt-link :to="{name: 'posts'}"><p>posts</p></nuxt-link>
   </div>
 </template>
 
 <script>
-import Item from '~/components/Item.vue';
+// import Item from '~/components/Item.vue';
 import {createClient} from '~/plugins/contentful.js'
 
 const client = createClient()
 
 export default {
-  components: {
-    Item
-  },
+  // components: {
+    // Item
+  // },
   // `env` is available in the context object
   asyncData ({env}) {
     return Promise.all([
@@ -30,7 +33,7 @@ export default {
     ]).then(([entries, posts]) => {
       // return data that should be available
       // in the template
-      console.log(posts)
+      console.log(posts, entries.items[0])
       return {
         person: entries.items[0],
         posts: posts.items
@@ -40,35 +43,9 @@ export default {
 }
 </script>
 
-<style>
-
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+<style scoped>
+.profile__image {
+  width: 200px;
+  border-radius: 50%;
 }
 </style>

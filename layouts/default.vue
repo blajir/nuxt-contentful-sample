@@ -1,20 +1,28 @@
 <template>
   <v-app>
-    <v-toolbar>
-      <v-toolbar-side-icon></v-toolbar-side-icon>
-      <v-toolbar-title>Title</v-toolbar-title>
+    <v-toolbar dark color="primary">
+      <v-toolbar-title>
+        <nuxt-link :to="{name: 'index'}" class="font-weight-light white--text">logjir</nuxt-link>
+        </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn flat>Link One</v-btn>
-        <v-btn flat>Link Two</v-btn>
-        <v-btn flat>Link Three</v-btn>
+        <!-- <v-btn flat>About</v-btn> -->
+        <v-btn flat>
+          <nuxt-link :to="{name: 'posts'}" class="white--text">Posts</nuxt-link>
+        </v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <v-content>
-      <v-container>
+      <v-container grid-list-md text-xs-center>
         <nuxt/>
       </v-container>
     </v-content>
+    <template>
+      <v-footer class="pa-3">
+        <v-spacer></v-spacer>
+        <div>&copy; {{ new Date().getFullYear() }}</div>
+      </v-footer>
+    </template>
   </v-app>
 </template>
 
