@@ -2,13 +2,13 @@
   <v-app>
     <v-toolbar dark color="primary">
       <v-toolbar-title>
-        <nuxt-link :to="{name: 'index'}" class="font-weight-light white--text">logjir</nuxt-link>
+        <nuxt-link :to="{name: 'index'}" class="font-weight-light white--text logo">logjir</nuxt-link>
         </v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <!-- <v-btn flat>About</v-btn> -->
         <v-btn flat>
-          <nuxt-link :to="{name: 'posts'}" class="white--text">Posts</nuxt-link>
+          <nuxt-link :to="{name: 'posts'}" class="white--text nav__item">Posts</nuxt-link>
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
@@ -46,6 +46,10 @@ html {
   margin: 0;
 }
 
+.logo {
+  text-decoration: none;
+}
+
 .button--green {
   display: inline-block;
   border-radius: 4px;
@@ -73,5 +77,9 @@ html {
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+.nav__item {
+  text-decoration: none;
 }
 </style>

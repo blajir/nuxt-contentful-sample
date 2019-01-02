@@ -1,9 +1,10 @@
 <template>
   <div>
-    <h1></h1>
-    <img class="profile__image" :src="person.fields.image.fields.file.url" alt="">
-    <p>{{ person.fields.name }}</p>
+    <h1>About</h1>
+    <p><img class="profile__image" :src="person.fields.image.fields.file.url" alt=""></p>
+    <h2>{{ person.fields.name }}</h2>
     <p>{{ person.fields.title }}</p>
+    <p>{{ person.fields.shortBio }}</p>
     <nuxt-link :to="{name: 'posts'}"><p>posts</p></nuxt-link>
   </div>
 </template>
