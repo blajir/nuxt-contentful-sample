@@ -1,6 +1,16 @@
 const pkg = require('./package')
 require('dotenv').config()
 
+const { getConfigForKeys } = require('./lib/config.js')
+const ctfConfig = getConfigForKeys([
+  'CTF_BLOG_POST_TYPE_ID',
+  'CTF_SPACE_ID',
+  'CTF_CDA_ACCESS_TOKEN'
+])
+
+const { createClient } = require('./plugins/contentful')
+const cdaClient = createClient(ctfConfig)
+
 module.exports = {
   mode: 'universal',
 
@@ -63,6 +73,13 @@ module.exports = {
     */
     extend(config, ctx) {
 
+    }
+  },
+  generate: {
+    async routes() {
+      const entries = await cdaClient
+        .getEntries(process.env.CTF_BLOG_POST_TYPE_ID);
+      return [...entries.items.map(entry => `/posts/${entry.fields.slug}`)];
     }
   },
   env: {
