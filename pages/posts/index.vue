@@ -33,7 +33,6 @@ export default {
     ]).then(([entries, posts]) => {
       // return data that should be available
       // in the template
-      console.log(posts)
       return {
         person: entries.items[0],
         posts: posts.items
