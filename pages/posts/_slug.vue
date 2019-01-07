@@ -5,7 +5,7 @@
     </div> -->
 
     <h1 class="detail__title">{{ post.fields.title }}</h1>
-    <p class="detail__date">{{ post.fields.publishDate }}</p>
+    <p class="detail__date">{{ (new Date(post.fields.publishDate)).toLocaleDateString() }}</p>
     <!-- <p class="detail__date">{{ post.fields.publishDate | moment("dddd, MMMM Do YYYY") }}</p> -->
     <!-- <ul>
       <li v-for="(tag, index) in post.fields.tags" v-bind:key="index">
