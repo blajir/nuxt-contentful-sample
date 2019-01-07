@@ -1,9 +1,8 @@
 <template>
   <v-app>
     <v-content>
-      <v-container>
-        <Item :posts="posts"></Item>
-      </v-container>
+      <h1>Post</h1>
+      <Item :posts="posts"></Item>
     </v-content>
   </v-app>
 </template>
@@ -43,4 +42,9 @@ export default {
 </script>
 
 <style scoped>
+  h1 {
+    margin-bottom: 20px;
+  }
+
+
 </style>

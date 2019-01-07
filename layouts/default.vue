@@ -18,7 +18,7 @@
       </v-toolbar-items>
     </v-toolbar>
     <v-content
-      style="padding-top: 64px;">
+      style="padding: 64px 0;">
       <v-container grid-list-md text-xs-center>
         <nuxt/>
       </v-container>
@@ -34,8 +34,7 @@
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Noto Sans JP', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

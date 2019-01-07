@@ -44,6 +44,7 @@ export default {
 <style>
 .detail {
   color: #222;
+  font-family: 'Noto Sans JP', sans-serif;
 }
 
 .detail__hero {

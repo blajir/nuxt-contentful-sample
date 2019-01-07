@@ -4,6 +4,7 @@
       <v-flex v-for="(post, index) in posts" v-bind:key="index" xs4>
         <v-hover>
           <v-card
+            flat
             slot-scope="{ hover }"
             :class="`elevation-${hover ? 12 : 2}`"
             class="mx-auto">
@@ -15,7 +16,7 @@
               <v-card-title primary-title>
                 <div class="card-text__wrapper">
                   <h3 class="headline mb-0">{{ post.fields.title }}</h3>
-                  <div>{{ post.fields.description }}</div>
+                  <p>{{ post.fields.description }}</p>
                 </div>
               </v-card-title>
             </nuxt-link>
@@ -45,7 +46,12 @@ export default {
   }
   .card-text__wrapper {
     text-align: left;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
 
+  .card-text__wrapper p {
+    margin-top: 10px;
+    line-height: 1.5;
   }
 
 </style>
