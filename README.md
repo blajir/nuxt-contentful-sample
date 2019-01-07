@@ -1,6 +1,9 @@
-# nuxt-sample
+# nuxt-contentful-sample
+Nuxt.js + Contentful + Netlifyで作成したHeadless　CMSのサンプルリポジトリです。  
+ContentfulのAPIキーは`@nuxtjs/dotenv`を用いて`.env`で管理しています。
 
-> My stunning Nuxt.js project
+## demo
+デモページは[こちら](https://cocky-mirzakhani-c636c2.netlify.com/)
 
 ## Build Setup
 
