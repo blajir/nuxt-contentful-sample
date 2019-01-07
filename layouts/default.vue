@@ -1,6 +1,11 @@
 <template>
-  <v-app>
-    <v-toolbar dark color="primary">
+  <v-app
+    style="position: relative;">
+    <v-toolbar
+      fixed
+      flat
+      dark
+      color="primary">
       <v-toolbar-title>
         <nuxt-link :to="{name: 'index'}" class="font-weight-light white--text logo">logjir</nuxt-link>
         </v-toolbar-title>
@@ -12,7 +17,8 @@
         </v-btn>
       </v-toolbar-items>
     </v-toolbar>
-    <v-content>
+    <v-content
+      style="padding-top: 64px;">
       <v-container grid-list-md text-xs-center>
         <nuxt/>
       </v-container>
