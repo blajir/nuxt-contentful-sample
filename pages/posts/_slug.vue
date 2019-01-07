@@ -67,19 +67,20 @@ export default {
 
 .detail-body h2 {
   margin-bottom: 30px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.5;
   letter-spacing: .03em;
 }
 
 .detail-body h3 {
   margin-bottom: 30px;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 1.5;
   letter-spacing: .03em;
 }
 
 .detail-body p {
+  margin-bottom: 20px;
   font-size: 16px;
   line-height: 1.5;
   text-align: justify;
