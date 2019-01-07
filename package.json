@@ -17,7 +17,8 @@
     "cross-env": "^5.2.0",
     "material-design-icons-iconfont": "^4.0.3",
     "nuxt": "^2.0.0",
-    "vue-markdown": "^2.2.4"
+    "vue-markdown": "^2.2.4",
+    "vue-moment": "^4.0.0"
   },
   "devDependencies": {
     "contentful": "^7.0.5",
