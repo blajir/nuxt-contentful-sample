@@ -32,7 +32,6 @@ export default {
       'content_type': env.CTF_BLOG_POST_TYPE_ID,
       'fields.slug': params.slug
     }).then(entries => {
-      console.log(entries.items[0]);
       return {
         post: entries.items[0]
       }

@@ -1,5 +1,4 @@
 const pkg = require('./package')
-const config = require('./.contentful.json')
 require('dotenv').config()
 
 module.exports = {
