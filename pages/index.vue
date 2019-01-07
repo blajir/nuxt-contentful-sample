@@ -36,7 +36,7 @@ export default {
       // return data that should be available
       // in the template
       return {
-        person: entries.items[0],
+        person: entries.items[0].fields.author,
         posts: posts.items
       }
     }).catch(console.error)
