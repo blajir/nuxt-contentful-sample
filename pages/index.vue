@@ -35,8 +35,9 @@ export default {
     ]).then(([entries, posts]) => {
       // return data that should be available
       // in the template
+      const ENTRIES_LENGTH = entries.total - 1;
       return {
-        person: entries.items[0].fields.author,
+        person: entries.items[ENTRIES_LENGTH],
         posts: posts.items
       }
     }).catch(console.error)
