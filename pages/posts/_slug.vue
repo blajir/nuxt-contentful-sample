@@ -48,61 +48,48 @@ export default {
   margin: 0 auto;
   color: #222;
   font-family: 'Noto Sans JP', sans-serif;
+  text-align: justify;
 }
 
 .detail__hero {
   width: 100%;
   height: 300px;
-  margin-bottom: 50px;
+  margin: 60px 0 50px;
   background-position: 50% 50%;
 }
 
-/* .detail__hero > img {
-  width: 100%;
-} */
-
 .detail__date {
-  text-align: right;
+  margin-top: 10px;
+  font-size: 13px;
 }
 
 .detail-body {
-  text-align-last: left;
 }
 
 .detail-body h2 {
-  margin-bottom: 30px;
+  margin: 70px 0 40px;
+  font-size: 28px;
   font-weight: bold;
-  line-height: 1.5;
+  line-height: 1.3;
   letter-spacing: .03em;
 }
 
 .detail-body h3 {
-  margin-bottom: 30px;
-  font-weight: bold;
-  line-height: 1.5;
+  margin: 40px 0 10px;
+  font-size: 21px;
+  font-weight: 500;
+  line-height: 1.3;
   letter-spacing: .03em;
 }
 
 .detail-body p {
-  margin-bottom: 20px;
+  margin: 30px 0;
   font-size: 16px;
-  line-height: 1.5;
-  text-align: justify;
-}
-
-.detail-body p + h2,
-.detail-body p + h3,
-.detail-body ul + h2,
-.detail-body ul + h3 {
-  margin-top: 70px;
+  line-height: 1.8;
 }
 
 .detail-body > ul {
   margin-bottom: 20px;
-}
-
-.detail-body > ul > li {
-  text-align: justify;
 }
 
 .detail-body > ul > li + li {

@@ -25,7 +25,9 @@
       </v-container>
     </v-content>
     <template>
-      <v-footer class="pa-3">
+      <v-footer
+        height="70"
+        class="pa-3">
         <v-spacer></v-spacer>
         <div>blajir &copy; {{ new Date().getFullYear() }}</div>
       </v-footer>
