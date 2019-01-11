@@ -1,17 +1,18 @@
 <template>
   <!-- <v-container grid-list-md text-xs-center> -->
     <v-layout row wrap>
-      <v-flex v-for="(post, index) in posts" v-bind:key="index" xs4>
-        <v-hover>
+      <v-flex
+        v-for="(post, index) in posts"
+        v-bind:key="index"
+        xs12
+        sm4>
           <v-card
             flat
-            slot-scope="{ hover }"
-            :class="`elevation-${hover ? 12 : 2}`"
             class="mx-auto">
             <nuxt-link :to="{ name: 'posts-slug', params: { slug: post.fields.slug }}" class="card-footer-item">
               <v-img
                 :src="post.fields.heroImage.fields.file.url"
-                aspect-ratio="2.75">
+                aspect-ratio="1.75">
                 </v-img>
               <v-card-title primary-title>
                 <div class="card-text__wrapper">
@@ -22,7 +23,7 @@
               </v-card-title>
             </nuxt-link>
           </v-card>
-        </v-hover>
+
       </v-flex>
     </v-layout>
   <!-- </v-container> -->
@@ -36,6 +37,7 @@ export default {
 
 <style lang="scss" scoped>
   .headline {
+    font-size: 21px !important;
     font-weight: bold;
   }
   .card-footer-item {
@@ -56,5 +58,9 @@ export default {
   .card-text__date {
     margin-bottom: 10px;
     font-size: 12px;
+  }
+
+  .container.grid-list-md .layout .flex {
+    padding: 16px;
   }
 </style>

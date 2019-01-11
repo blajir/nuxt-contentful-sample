@@ -4,6 +4,7 @@
     <v-toolbar
       fixed
       flat
+      height="70"
       dark
       color="primary">
       <v-toolbar-title>
@@ -18,7 +19,7 @@
       </v-toolbar-items>
     </v-toolbar>
     <v-content
-      style="padding: 64px 0;">
+      style="padding: 100px 0 70px;">
       <v-container grid-list-md text-xs-center>
         <nuxt/>
       </v-container>

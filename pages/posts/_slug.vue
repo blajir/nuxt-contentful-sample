@@ -43,6 +43,9 @@ export default {
 
 <style>
 .detail {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
   color: #222;
   font-family: 'Noto Sans JP', sans-serif;
 }

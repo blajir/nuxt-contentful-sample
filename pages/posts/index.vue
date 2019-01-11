@@ -1,6 +1,6 @@
 <template>
   <div class="posts">
-    <h1>Post</h1>
+    <h1>Posts</h1>
     <Item :posts="posts.posts"></Item>
   </div>
 </template>
