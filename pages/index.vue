@@ -26,7 +26,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .profile__image {
   width: 200px;
   border-radius: 50%;

@@ -41,7 +41,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 .detail {
   color: #222;
   font-family: 'Noto Sans JP', sans-serif;
