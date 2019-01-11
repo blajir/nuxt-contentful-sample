@@ -1,10 +1,8 @@
 <template>
-  <v-app>
-    <v-content>
-      <h1>Post</h1>
-      <Item :posts="posts.posts"></Item>
-    </v-content>
-  </v-app>
+  <div class="posts">
+    <h1>Post</h1>
+    <Item :posts="posts.posts"></Item>
+  </div>
 </template>
 
 <script>
