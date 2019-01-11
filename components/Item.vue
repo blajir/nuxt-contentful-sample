@@ -6,14 +6,22 @@
         v-bind:key="index"
         xs12
         sm4>
+        <v-hover>
           <v-card
             flat
+            slot-scope="{ hover }"
+            :class="`${hover ? 'is-hover' : ''}`"
             class="mx-auto">
             <nuxt-link :to="{ name: 'posts-slug', params: { slug: post.fields.slug }}" class="card-footer-item">
-              <v-img
+              <div class="card-image">
+                <div
+                   class="card-image__item"
+                  :style="{ backgroundImage: 'url(' + post.fields.heroImage.fields.file.url + ')'}"></div>
+              </div>
+              <!-- <v-img
                 :src="post.fields.heroImage.fields.file.url"
                 aspect-ratio="1.75">
-                </v-img>
+                </v-img> -->
               <v-card-title primary-title>
                 <div class="card-text__wrapper">
                   <p class="card-text__date">{{ (new Date(post.fields.publishDate)).toLocaleDateString() }}</p>
@@ -23,7 +31,7 @@
               </v-card-title>
             </nuxt-link>
           </v-card>
-
+        </v-hover>
       </v-flex>
     </v-layout>
   <!-- </v-container> -->
@@ -47,6 +55,23 @@ export default {
   .card-text__wrapper {
     text-align: left;
     font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background: #000;
+    &__item {
+      width: 100%;
+      height: 100%;
+      background-position: 50%;
+      transition: .2s all ease;
+      .is-hover & {
+        transform: scale(1.1);
+        opacity: .75;
+      }
+    }
   }
 
   .card-text__text {
