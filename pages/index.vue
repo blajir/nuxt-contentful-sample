@@ -2,10 +2,10 @@
   <div class="about">
     <h1>About</h1>
     <p><img class="profile__image" :src="posts.person.fields.image.fields.file.url" alt=""></p>
-    <h2>{{ posts.person.fields.name }}</h2>
-    <p>{{ posts.person.fields.title }}</p>
-    <vue-markdown>{{ posts.person.fields.shortBio }}</vue-markdown>
-    <p>My posts is <nuxt-link :to="{name: 'posts'}">here.</nuxt-link></p>
+    <h2 class="about__name">{{ posts.person.fields.name }}</h2>
+    <p class="about__job">{{ posts.person.fields.title }}</p>
+    <vue-markdown class="about__text">{{ posts.person.fields.shortBio }}</vue-markdown>
+    <!-- <p>My posts is <nuxt-link :to="{name: 'posts'}">here.</nuxt-link></p> -->
   </div>
 </template>
 
@@ -26,11 +26,27 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .profile__image {
-  width: 200px;
+  width: 150px;
   border-radius: 50%;
 }
+
+.about {
+  &__name {
+    margin-bottom: 15px;
+    line-height: 1.3;
+  }
+  &__job {
+    color: #a2a4a5;
+    font-size: 14px;
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
 
 .about h1 {
   margin-bottom: 20px;
