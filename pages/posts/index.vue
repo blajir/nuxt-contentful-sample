@@ -1,6 +1,6 @@
 <template>
   <div class="posts">
-    <h1>Posts</h1>
+    <h1 class="posts__title">Posts</h1>
     <Item :posts="posts.posts"></Item>
   </div>
 </template>
@@ -27,5 +27,7 @@ export default {
     margin-bottom: 20px;
   }
 
-
+  .posts__title {
+    font-family: 'Cookie', cursive;
+  }
 </style>

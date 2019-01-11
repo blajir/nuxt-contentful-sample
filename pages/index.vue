@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>About</h1>
+    <h1 class="about__title">About</h1>
     <p><img class="profile__image" :src="posts.person.fields.image.fields.file.url" alt=""></p>
     <h2 class="about__name">{{ posts.person.fields.name }}</h2>
     <p class="about__job">{{ posts.person.fields.title }}</p>
@@ -33,6 +33,9 @@ export default {
 }
 
 .about {
+  &__title {
+    font-family: 'Cookie', cursive;
+  }
   &__name {
     margin-bottom: 15px;
     line-height: 1.3;

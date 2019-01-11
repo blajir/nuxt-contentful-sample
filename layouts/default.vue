@@ -29,7 +29,7 @@
         height="70"
         class="pa-3">
         <v-spacer></v-spacer>
-        <div>blajir &copy; {{ new Date().getFullYear() }}</div>
+        <div class="footer__item">blajir &copy; {{ new Date().getFullYear() }}</div>
       </v-footer>
     </template>
   </v-app>
@@ -55,7 +55,9 @@ html {
 }
 
 .logo {
+  font-family: 'Pacifico', cursive;
   text-decoration: none;
+  letter-spacing: .1em;
 }
 
 .button--green {
@@ -89,5 +91,9 @@ html {
 
 .nav__item {
   text-decoration: none;
+}
+
+.footer__item {
+  color: #a2a4a5;
 }
 </style>

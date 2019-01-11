@@ -68,8 +68,10 @@ export default {
 
 .detail-body h2 {
   margin: 70px 0 40px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #d2d2d2;
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 500;
   line-height: 1.3;
   letter-spacing: .03em;
 }
