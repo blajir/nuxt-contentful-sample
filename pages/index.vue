@@ -1,46 +1,27 @@
 <template>
   <div class="about">
     <h1>About</h1>
-    <p><img class="profile__image" :src="person.fields.image.fields.file.url" alt=""></p>
-    <h2>{{ person.fields.name }}</h2>
-    <p>{{ person.fields.title }}</p>
-    <vue-markdown>{{ person.fields.shortBio }}</vue-markdown>
+    <p><img class="profile__image" :src="posts.person.fields.image.fields.file.url" alt=""></p>
+    <h2>{{ posts.person.fields.name }}</h2>
+    <p>{{ posts.person.fields.title }}</p>
+    <vue-markdown>{{ posts.person.fields.shortBio }}</vue-markdown>
     <p>My posts is <nuxt-link :to="{name: 'posts'}">here.</nuxt-link></p>
   </div>
 </template>
 
 <script>
-// import Item from '~/components/Item.vue';
+import { mapGetters } from 'vuex';
 import VueMarkdown from 'vue-markdown'
-import {createClient} from '~/plugins/contentful.js'
-
-const client = createClient()
 
 export default {
   components: {
     VueMarkdown
   },
-  // `env` is available in the context object
-  asyncData ({env}) {
-    return Promise.all([
-      // fetch the owner of the blog
-      client.getEntries({
-        'sys.id': env.CTF_PERSON_ID
-      }),
-      // fetch all blog posts sorted by creation date
-      client.getEntries({
-        'content_type': env.CTF_BLOG_POST_TYPE_ID,
-        order: '-sys.createdAt'
-      })
-    ]).then(([entries, posts]) => {
-      // return data that should be available
-      // in the template
-      const ENTRIES_LENGTH = entries.total - 1;
-      return {
-        person: entries.items[ENTRIES_LENGTH],
-        posts: posts.items
-      }
-    }).catch(console.error)
+  async asyncData ({store, env}) {
+    await store.dispatch('fetchItems', {env})
+  },
+  computed: {
+    ...mapGetters(['posts'])
   }
 }
 </script>
