@@ -67,6 +67,7 @@ export default {
       height: 100%;
       background-position: 50%;
       transition: .2s all ease;
+      background-size: cover;
       .is-hover & {
         transform: scale(1.1);
         opacity: .75;
