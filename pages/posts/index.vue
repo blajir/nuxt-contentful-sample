@@ -15,7 +15,9 @@ export default {
   components: {
     Item
   },
-  asyncData ({env}) {},
+  async asyncData ({store, env}) {
+    await store.dispatch('fetchItems', {env})
+  },
   computed: {
     ...mapGetters(['posts'])
   }
