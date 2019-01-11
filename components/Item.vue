@@ -15,8 +15,9 @@
                 </v-img>
               <v-card-title primary-title>
                 <div class="card-text__wrapper">
+                  <p class="card-text__date">{{ (new Date(post.fields.publishDate)).toLocaleDateString() }}</p>
                   <h3 class="headline mb-0">{{ post.fields.title }}</h3>
-                  <p>{{ post.fields.description }}</p>
+                  <p class="card-text__text">{{ post.fields.description }}</p>
                 </div>
               </v-card-title>
             </nuxt-link>
@@ -35,10 +36,7 @@ export default {
 
 <style scoped>
   .headline {
-  /* padding: 3em 0 0; */
-  }
-  .headline h1 {
-    font-size: 3.5em;
+    font-weight: bold;
   }
   .card-footer-item {
     text-decoration: none;
@@ -49,9 +47,15 @@ export default {
     font-family: 'Noto Sans JP', sans-serif;
   }
 
-  .card-text__wrapper p {
+  .card-text__text {
     margin-top: 10px;
+    font-size: 14px;
     line-height: 1.5;
+  }
+
+  .card-text__date {
+    margin-bottom: 10px;
+    font-size: 12px;
   }
 
 </style>
