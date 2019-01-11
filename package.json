@@ -24,6 +24,8 @@
   },
   "devDependencies": {
     "contentful": "^7.0.5",
-    "nodemon": "^1.11.0"
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.11.0",
+    "sass-loader": "^7.1.0"
   }
 }

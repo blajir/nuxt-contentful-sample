@@ -34,7 +34,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .headline {
     font-weight: bold;
   }
@@ -57,5 +57,4 @@ export default {
     margin-bottom: 10px;
     font-size: 12px;
   }
-
 </style>
