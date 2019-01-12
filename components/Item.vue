@@ -61,7 +61,6 @@ export default {
     width: 100%;
     height: 200px;
     overflow: hidden;
-    background: #000;
     &__item {
       width: 100%;
       height: 100%;
