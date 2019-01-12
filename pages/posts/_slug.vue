@@ -1,8 +1,8 @@
 <template>
   <div class="detail">
-    <!-- <div>
+    <div>
       <v-breadcrumbs :items="items" divider=">"></v-breadcrumbs>
-    </div> -->
+    </div>
 
     <h1 class="detail__title">{{ post.fields.title }}</h1>
     <p class="detail__date">{{ (new Date(post.fields.publishDate)).toLocaleDateString() }} 投稿</p>
@@ -38,6 +38,20 @@ export default {
     })
     .catch(console.error)
   },
+  data: () => ({
+    items: [
+      {
+        text: 'Home',
+        disabled: false,
+        href: '/'
+      },
+      {
+        text: 'Posts',
+        disabled: false,
+        href: '/posts'
+      },
+    ]
+  })
 }
 </script>
 
@@ -119,6 +133,10 @@ export default {
 }
 .copy li {
   margin: 0;
+}
+
+.v-breadcrumbs {
+  padding: 0 0 18px;
 }
 
 
