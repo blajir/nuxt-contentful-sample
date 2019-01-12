@@ -13,9 +13,10 @@
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <!-- <v-btn flat>About</v-btn> -->
-        <v-btn flat>
-          <nuxt-link :to="{name: 'posts'}" class="white--text nav__item">Posts</nuxt-link>
-        </v-btn>
+        <v-btn
+          flat
+          class="white--text nav__item"
+          @click="goToPosts">Posts</v-btn>
       </v-toolbar-items>
     </v-toolbar>
     <v-content
@@ -34,6 +35,17 @@
     </template>
   </v-app>
 </template>
+
+<script>
+export default {
+  methods: {
+    goToPosts () {
+      this.$router.push('/posts')
+    }
+  }
+}
+</script>
+
 
 <style>
 html {
